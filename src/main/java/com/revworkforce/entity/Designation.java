@@ -12,7 +12,9 @@ public class Designation {
 
     @Column(nullable = false)
     private String title;
-
+    @ManyToOne
+    @JoinColumn(name = "department_id", nullable = false)
+    private Department department;
     public Designation() {}
 
     public Designation(String title) {
@@ -29,5 +31,13 @@ public class Designation {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+     public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
     }
 }
