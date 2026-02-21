@@ -1,8 +1,12 @@
 package com.revworkforce.entity;
 
 import jakarta.persistence.*;
-import java.util.Set;
 
+import java.util.ArrayList;
+import java.util.Set;
+import java.util.List;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 @Entity
 @Table(name = "users")
 public class User {
@@ -36,6 +40,14 @@ public class User {
     @ManyToOne
     @JoinColumn(name = "designation_id")
     private Designation designation;
+    @ManyToOne
+    @JoinColumn(name = "manager_id")
+    @JsonBackReference
+    private User manager;
+
+    @OneToMany(mappedBy = "manager")
+    @JsonManagedReference
+    private List<User> reportees = new ArrayList<>();
 
     public User() {
     }
@@ -100,5 +112,22 @@ public class User {
 
     public void setDesignation(Designation designation) {
         this.designation = designation;
+    }
+
+    // Getter & Setter
+    public User getManager() {
+        return manager;
+    }
+
+    public void setManager(User manager) {
+        this.manager = manager;
+    }
+
+    public List<User> getReportees() {
+        return reportees;
+    }
+
+    public void setReportees(List<User> reportees) {
+        this.reportees = reportees;
     }
 }
