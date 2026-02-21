@@ -1,7 +1,7 @@
 package com.revworkforce.entity;
 
 import jakarta.persistence.*;
-
+import java.util.Set;
 @Entity
 @Table(name = "roles")
 public class Role {
@@ -12,8 +12,11 @@ public class Role {
 
     @Column(unique = true, nullable = false)
     private String name;
+    @ManyToMany(mappedBy = "roles")
+    private Set<User> users;
 
-    public Role() {}
+    public Role() {
+    }
 
     public Role(String name) {
         this.name = name;

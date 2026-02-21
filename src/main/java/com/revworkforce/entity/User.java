@@ -1,6 +1,7 @@
 package com.revworkforce.entity;
 
 import jakarta.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
@@ -22,9 +23,9 @@ public class User {
     private String password;
 
     // 🔹 Many users can have same role
-    @ManyToOne
-    @JoinColumn(name = "role_id")
-    private Role role;
+    @ManyToMany
+    @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> roles;
 
     // 🔹 Many users can belong to same department
     @ManyToOne
@@ -36,7 +37,8 @@ public class User {
     @JoinColumn(name = "designation_id")
     private Designation designation;
 
-    public User() {}
+    public User() {
+    }
 
     // getters & setters
 
@@ -72,8 +74,8 @@ public class User {
         return password;
     }
 
-    public Role getRole() {
-        return role;
+    public Set<Role> getRoles() {
+        return roles;
     }
 
     public Department getDepartment() {
@@ -88,8 +90,8 @@ public class User {
         this.password = password;
     }
 
-    public void setRole(Role role) {
-        this.role = role;
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 
     public void setDepartment(Department department) {
