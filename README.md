@@ -43,6 +43,7 @@ RevWorkforce Backend
 ├── Entity Layer          → Database Models
 └── Security Layer        → Spring Security + JWT
 
+
 ⚙️ Tech Stack
 | Category          | Technology            |
 | ----------------- | --------------------- |
@@ -60,8 +61,11 @@ RevWorkforce Backend
 src/main/java/com/revworkforce/
 │
 ├── controller/
+│
 ├── service/
+│
 ├── repository/
+│
 ├── security/
 │   ├── JwtUtil.java
 │   ├── JwtAuthenticationFilter.java
