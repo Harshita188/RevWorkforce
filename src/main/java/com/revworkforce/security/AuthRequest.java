@@ -22,4 +22,11 @@ public class AuthRequest {
     public void setPassword(String password) {
         this.password = password;
     }
+    // public String getRoles() {
+    //     return roles;
+    // }
+    // public void setRoles(String roles) {
+    //     this.roles = roles;
+    // }
+    // private String roles;
 }
