@@ -62,25 +62,44 @@ Layer	URL
 src/main/java/com/revworkforce/
 
 │
+
 controller/
+
 service/
+
 repository/
+
 security/
+
    • JwtUtil.java
+   
    • JwtAuthenticationFilter.java
+   
    • SecurityConfig.java
+   
    • CustomUserDetails.java
 
+
 entity/
+
    • User.java
+   
    • Role.java
+   
    • Leave.java
+   
    • LeaveType.java
+   
    • LeaveBalance.java
+   
    • Department.java
+   
    • Designation.java
+   
    • Holiday.java
+   
    • Performance.java
+   
 
 RevWorkforceApplication.java
 
