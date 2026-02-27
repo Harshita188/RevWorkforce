@@ -190,9 +190,3 @@ RevWorkforce Backend offers:
 
 💼 Complete Admin + Manager + Employee workflows
 
-<div align="center">
-💡 Want a stylish Frontend README too?
-
-I can prepare it exactly like this — clean & professional.
-
-</div>
