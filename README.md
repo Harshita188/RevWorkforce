@@ -34,6 +34,7 @@ Layer	URL
 🟢 Backend (Spring Boot)	http://localhost:8080
 
 🏗️ Backend Architecture
+
 RevWorkforce Backend
 │
 ├── Controller Layer      → REST Endpoints
@@ -55,6 +56,7 @@ RevWorkforce Backend
 | Frontend          | Angular               |
 
 📁 Folder Structure
+
 src/main/java/com/revworkforce/
 │
 ├── controller/
