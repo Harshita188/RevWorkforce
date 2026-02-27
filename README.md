@@ -35,13 +35,14 @@ Layer	URL
 
 🏗️ Backend Architecture
 
-RevWorkforce Backend
-│
-├── Controller Layer      → REST Endpoints
-├── Service Layer         → Business Logic
-├── Repository Layer      → JPA Repositories
-├── Entity Layer          → Database Models
-└── Security Layer        → Spring Security + JWT
+| Layer            | Description           |
+| ---------------- | --------------------- |
+| Controller Layer | REST Endpoints        |
+| Service Layer    | Business Logic        |
+| Repository Layer | JPA Repositories      |
+| Entity Layer     | Database Models       |
+| Security Layer   | Spring Security + JWT |
+
 
 
 ⚙️ Tech Stack
@@ -59,31 +60,29 @@ RevWorkforce Backend
 📁 Folder Structure
 
 src/main/java/com/revworkforce/
+
 │
-├── controller/
-│
-├── service/
-│
-├── repository/
-│
-├── security/
-│   ├── JwtUtil.java
-│   ├── JwtAuthenticationFilter.java
-│   ├── SecurityConfig.java
-│   └── CustomUserDetails.java
-│
-├── entity/
-│   ├── User.java
-│   ├── Role.java
-│   ├── Leave.java
-│   ├── LeaveType.java
-│   ├── LeaveBalance.java
-│   ├── Department.java
-│   ├── Designation.java
-│   ├── Holiday.java
-│   └── Performance.java
-│
-└── RevWorkforceApplication.java
+controller/
+service/
+repository/
+security/
+   • JwtUtil.java
+   • JwtAuthenticationFilter.java
+   • SecurityConfig.java
+   • CustomUserDetails.java
+
+entity/
+   • User.java
+   • Role.java
+   • Leave.java
+   • LeaveType.java
+   • LeaveBalance.java
+   • Department.java
+   • Designation.java
+   • Holiday.java
+   • Performance.java
+
+RevWorkforceApplication.java
 
 🔑 API Endpoints (Summary)
 | Method | Endpoint      | Description          |
